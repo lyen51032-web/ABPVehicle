@@ -1,0 +1,40 @@
+﻿@model TestProject.VehicleApp.Dto.VehicleEditModel
+@using TestProject.Web.Models.Common.Modals
+@{ Layout = null; }
+@Html.Partial("~/Views/Shared/Modals/_ModalHeader.cshtml", new ModalHeaderViewModel(L("EditVehicle")))
+
+<div class="modal-body">
+	<form name="VehicleEditForm" role="form" novalidate class="form-validation">
+		<input type="hidden" name="Id" value="@Model.Id" />
+		<div class="row clearfix">
+			<div class="col-sm-12">
+                <div class="form-group form-float">
+                    <div class="form-line">
+                        <input  type="text" name="VehicleType" value="@Model.VehicleType" required maxlength="20" class="validate form-control" autocomplete="off">
+                        <label for="displayname" class="form-label">車輛類型</label>
+                    </div>
+                    <div class="form-line">
+                        <input  type="text" name="PlateNumber" value="@Model.PlateNumber" required maxlength="20"  class="validate form-control" autocomplete="off">
+                        <label for="displayname" class="form-label">車牌號碼</label>
+                    </div>
+                    <div class="form-line">
+                        <input  type="number" name="Mileage" value="@Model.Mileage" required maxlength="20" class="validate form-control" autocomplete="off">
+                        <label for="displayname" class="form-label">里程數</label>
+                    </div>
+                    <div class="form-line">
+                        <input  type="datetime-local" name="MFD" value="@Model.MFD" required maxlength="20"  class="validate form-control" autocomplete="off">
+                        <label for="displayname" class="form-label">出廠日期</label>
+                    </div>
+                    <div class="form-line">
+                        <input  type="text" name="PersonId" value="@Model.PersonName" required maxlength="20" class="validate form-control" autocomplete="off">
+                        <label for="displayname" class="form-label">車輛持有者</label>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</form>
+</div>
+
+@Html.Partial("~/Views/Shared/Modals/_ModalFooterWithSaveAndCancel.cshtml")
+
+<script src="~/Views/Vehicle/_EditVhicleModal.js"></script>
