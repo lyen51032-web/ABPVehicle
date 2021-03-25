@@ -1,6 +1,6 @@
 ﻿(function ($) {
 	var _vehicleService = abp.services.app.vehicle;
-	var _$modal = $('#VehicleEditModal');
+	var _$modal = $('#VehicleListModel');
 	var _$form = $('form[name=VehicleEditForm]');
 
 	function save() {

@@ -37,9 +37,10 @@ namespace TestProject.Web.Controllers
         public ActionResult EditVehicleModal(int vehicleId)
         {
             var vehicleDto = _vehicleAppService.GetAllVehicle().Where(o => o.Id == vehicleId).FirstOrDefault();
-            var vResult = new VehicleListModel();
-            ObjectMapper.Map(vehicleDto, vResult);
-            return View("_EditVehicleModal", vResult);
+
+            //var vResult = new VehicleListModel();
+            //ObjectMapper.Map(vehicleDto, vResult);
+            return View("_EditVehicleModal", vehicleDto);
         }
 
         // GET: Vehicle

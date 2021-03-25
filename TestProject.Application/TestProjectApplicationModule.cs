@@ -41,10 +41,9 @@ namespace TestProject
                 cfg.CreateMap<CreateUserDto, User>();
                 cfg.CreateMap<CreateUserDto, User>().ForMember(x => x.Roles, opt => opt.Ignore());
 
-                cfg.CreateMap<PersonEditModel, Person>(); 
-                cfg.CreateMap<VehicleEditModel, Vehicle>();
-                cfg.CreateMap<Vehicle, VehicleEditModel > ();
-
+                cfg.CreateMap<PersonEditModel, Person>();
+                cfg.CreateMap<VehicleListModel, Vehicle>();
+                cfg.CreateMap<Vehicle, VehicleListModel>();
             });
         }
 

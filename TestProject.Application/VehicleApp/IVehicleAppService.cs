@@ -19,7 +19,7 @@ namespace TestProject.VehicleApp
         /// <param name="input"> 傳入參數 </param>
         /// <returns> </returns>
         [UnitOfWork]
-        MessageModel AddVehicle(VehicleEditModel input);
+        MessageModel AddVehicle(VehicleListModel input);
 
         /// <summary>
         /// 刪除車輛

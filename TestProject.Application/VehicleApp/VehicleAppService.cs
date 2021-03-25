@@ -31,7 +31,7 @@ namespace TestProject.VehicleApp
         /// </summary>
         /// <param name="input"> </param>
         /// <returns> </returns>
-        public MessageModel AddVehicle(VehicleEditModel input)
+        public MessageModel AddVehicle(VehicleListModel input)
         {
             try
             {
@@ -125,6 +125,7 @@ namespace TestProject.VehicleApp
                          join b in _vehicleRepository.GetAll() on a.Id equals b.PersonId
                          select new VehicleListModel
                          {
+                             Id = b.Id,
                              VehicleType = b.VehicleType,
                              PlateNumber = b.PlateNumber,
                              Mileage = b.Mileage,
