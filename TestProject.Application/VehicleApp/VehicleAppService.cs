@@ -137,5 +137,14 @@ namespace TestProject.VehicleApp
             //return this._vehicleRepository.GetAllList();
             return query;
         }
+
+        public List<Person> GetRegisterPerson()
+        {
+            List<Person> result = new List<Person>();
+            var query = (from a in _personRepository.GetAll()
+                         select a).ToList();
+
+            return query;
+        }
     }
 }

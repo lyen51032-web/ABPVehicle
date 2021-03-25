@@ -42,5 +42,7 @@ namespace TestProject.VehicleApp
         //IReadOnlyList<Vehicle> GetAllVehicle();
 
         List<VehicleListModel> GetAllVehicle();
+
+        List<Person> GetRegisterPerson();
     }
 }
