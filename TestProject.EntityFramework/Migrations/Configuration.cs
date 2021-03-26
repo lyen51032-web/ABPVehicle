@@ -8,13 +8,13 @@ namespace TestProject.Migrations
 {
     public sealed class Configuration : DbMigrationsConfiguration<TestProject.EntityFramework.TestProjectDbContext>, IMultiTenantSeed
     {
-        public AbpTenantBase Tenant { get; set; }
-
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "TestProject";
         }
+
+        public AbpTenantBase Tenant { get; set; }
 
         protected override void Seed(TestProject.EntityFramework.TestProjectDbContext context)
         {

@@ -102,6 +102,7 @@
 		}
 
 		_vehicleService.getRegisterPerson().done(function (data) {
+			debugger
 			data = $.map(data, function (item, a) {
 				return "<option value=" + item.id + ">" + item.name + "</option>";
 			});

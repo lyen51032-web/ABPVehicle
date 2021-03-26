@@ -131,8 +131,21 @@ namespace TestProject.VehicleApp
                              Mileage = b.Mileage,
                              MFD = b.MFD,
                              PersonId = b.PersonId,
-                             PersonName = a.Name,
+                             PersonName = a.Name
                          }).ToList();
+
+            //var person = _personRepository.GetAll().Where(o => o.Id == 1).Select(O => O.Vehicles);
+            //var vehicle = _vehicleRepository.GetAll();
+            //vehicle.Select(o => new VehicleListModel()
+            //{
+            //    Id = o.Id,
+            //    VehicleType = o.VehicleType,
+            //    PlateNumber = o.PlateNumber,
+            //    Mileage = o.Mileage,
+            //    MFD = o.MFD,
+            //    PersonId = o.PersonId,
+            //    PersonName = o.Person.Name
+            //});
 
             //return this._vehicleRepository.GetAllList();
             return query;

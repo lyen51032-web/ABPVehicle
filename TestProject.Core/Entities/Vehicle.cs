@@ -10,12 +10,27 @@ using System.Threading.Tasks;
 namespace TestProject.Entities
 {
     [Table("Vehicle")]
-    public class Vehicle : Entity<int>,IHasCreationTime,IHasModificationTime,ICreationAudited,IModificationAudited
+    public class Vehicle : Entity<int>, IHasCreationTime, IHasModificationTime, ICreationAudited, IModificationAudited
     {
         /// <summary>
-        /// 車輛類型
+        /// 出廠日期
         /// </summary>
-        public int VehicleType { get; set; }
+        public DateTime MFD { get; set; }
+
+        /// <summary>
+        /// 里程數
+        /// </summary>
+        public decimal? Mileage { get; set; }
+
+        /// <summary>
+        /// 關聯人員
+        /// </summary>
+        public virtual Person Person { get; set; }
+
+        /// <summary>
+        /// 車輛持有者
+        /// </summary>
+        public int? PersonId { get; set; }
 
         /// <summary>
         /// 車牌號碼
@@ -23,20 +38,9 @@ namespace TestProject.Entities
         public string PlateNumber { get; set; }
 
         /// <summary>
-        /// 里程數
+        /// 車輛類型
         /// </summary>
-        public decimal? Mileage { get; set; }
-
-
-        /// <summary>
-        /// 出廠日期
-        /// </summary>
-        public DateTime MFD { get; set; }
-
-        /// <summary>
-        /// 車輛持有者
-        /// </summary>
-        public int? PersonId { get; set; }
+        public int VehicleType { get; set; }
 
         #region Default Parameter
 

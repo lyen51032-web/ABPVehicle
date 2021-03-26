@@ -17,6 +17,11 @@ namespace TestProject.Entities
         /// </summary>
         public string Name { get; set; }
 
+        /// <summary>
+        /// 關聯車輛
+        /// </summary>
+        public virtual ICollection<Vehicle> Vehicles { get; set; }
+
         #region Default Parameter
 
         /// <summary>
