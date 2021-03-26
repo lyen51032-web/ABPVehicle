@@ -78,5 +78,6 @@
     <text name="Delete">Delete</text>
 
     <text name="Persons">Persons</text>
+    <text name="Vehicle">Vehicle</text>
   </texts>
 </localizationDictionary>

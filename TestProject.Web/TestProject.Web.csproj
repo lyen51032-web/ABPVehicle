@@ -2935,6 +2935,7 @@
     <Content Include="Views\Vehicle\_EditVehicleModal.cshtml" />
     <Content Include="Views\Person\Index.cshtml" />
     <Content Include="Views\Vehicle\Index.cshtml" />
+    <Content Include="Views\Vehicle\_EditUserModal.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
