@@ -1,6 +1,7 @@
 ﻿@using TestProject.Web.Models.Common.Modals
 @model TestProject.VehicleApp.Dto.VehicleListModel
-@{ Layout = null; }
+@{ Layout = null;
+    string vehicleTypeName = "";}
 @Html.Partial("~/Views/Shared/Modals/_ModalHeader.cshtml", new ModalHeaderViewModel("編輯車輛"))
 
 <div class="modal-body">
@@ -12,7 +13,9 @@
                 <div class="form-group form-float">
 
                     <label for="VehicleType" class="form-label">車輛類型</label>
-                    <input type="text" name="VehicleType" value="@Model.VehicleType" required maxlength="20" class="validate form-control" autocomplete="off">
+
+                    @if (@Model.VehicleType == 1) { vehicleTypeName = "汽車"; } else { vehicleTypeName = "機車"; }
+                    <input type="text" name="VehicleType" value="@vehicleTypeName" required maxlength="20" class="validate form-control" autocomplete="off">
 
                     <label for="PlateNumber" class="form-label">車牌號碼</label>
                     <input type="text" name="PlateNumber" value="@Model.PlateNumber" required maxlength="20" class="validate form-control" autocomplete="off">
