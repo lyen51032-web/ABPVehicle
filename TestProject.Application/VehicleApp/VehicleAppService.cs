@@ -146,5 +146,14 @@ namespace TestProject.VehicleApp
 
             return query;
         }
+
+        public List<KeyValuePair<int, string>> GetVehicleType()
+        {
+            List<KeyValuePair<int, string>> query = new List<KeyValuePair<int, string>>();
+            query.Add(new KeyValuePair<int, string>(2, "機車"));
+            query.Add(new KeyValuePair<int, string>(1, "汽車"));
+
+            return query;
+        }
     }
 }

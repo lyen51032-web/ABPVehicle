@@ -44,7 +44,7 @@
                             <tr>
                                 <td>@(index+=1)</td>
 
-                                @if (@vehicle.VehicleType == 1) { vehicleTypeName = "汽車"; }else { vehicleTypeName = "機車"; }
+                                @if (@vehicle.VehicleType == 1) { vehicleTypeName = "汽車"; } else { vehicleTypeName = "機車"; }
                                 <td>@vehicleTypeName</td>
                                 <td>@vehicle.PlateNumber</td>
                                 <td>@vehicle.Mileage</td>
@@ -86,10 +86,13 @@
                             <div class="form-group form-float">
                                 <label for="name" class="form-label">車輛類型</label>
                                 <div class="form-line">
-                                    <select name="VehicleType" class="validate form-control">
-                                        <option value="1">汽車</option>
-                                        <option value="2">機車</option>
+                                    <select id="ddlVehicleType" name="VehicleType" class="validate form-control">
+                                        
                                     </select>
+                                    @*<select name="VehicleType" class="validate form-control">
+                                            <option value="1">汽車</option>
+                                            <option value="2">機車</option>
+                                        </select>*@
                                 </div>
                             </div>
                         </div>
@@ -126,7 +129,6 @@
                                 <label for="name" class="form-label">車輛持有者</label>
                                 <div class="form-line">
                                     <select id="ddlPerson"></select>
-                                    <input type="text" name="PersonId" class="validate form-control">
                                 </div>
                             </div>
                         </div>

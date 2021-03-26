@@ -77,8 +77,8 @@
 		}
 
 		/**
-	    * 刪除人員
-		* @param vehicleId 人員 ID
+	    * 刪除車輛
+		* @param vehicleId 車輛 ID
 		*/
 		function deleteVehicle(vehicleId) {
 			abp.message.confirm(null,
@@ -102,12 +102,21 @@
 		}
 
 		_vehicleService.getRegisterPerson().done(function (data) {
-			console.dir(data);
-			debugger
 			data = $.map(data, function (item, a) {
 				return "<option value=" + item.id + ">" + item.name + "</option>";
 			});
-			$("#ddlPerson").html(data.join(""));
+			$("#ddlPerson").append(data.join("")).selectpicker('refresh').selectpicker('render');
 		});
+
+
+
+		_vehicleService.getVehicleType().done(function (data) {
+			data = $.map(data, function (item, a) {
+				return "<option value=" + item.key + ">" + item.value + "</option>";
+			});
+			$("#ddlVehicleType").append(data.join("")).selectpicker('refresh').selectpicker('render');
+		});
+
+		
 	});
 })();

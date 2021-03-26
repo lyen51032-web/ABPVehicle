@@ -44,5 +44,7 @@ namespace TestProject.VehicleApp
         List<VehicleListModel> GetAllVehicle();
 
         List<Person> GetRegisterPerson();
+
+        List<KeyValuePair<int, string>> GetVehicleType();
     }
 }
